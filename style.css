@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;1,700&display=swap");
+
+body {
+  background-color: #1b4aa8;
+}
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 600px;
+  margin: 12% auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  font-family: "Open Sans";
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 700;
+  padding-left: 1rem;
+}
+
+p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+  font-weight: 500;
+  padding-left: 1rem;
+}
+button {
+  cursor: pointer;
+}
+.btn {
+  background-color: #1b72a8;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  font-size: 16px;
+  width: 100%;
+  text-align: start;
+  transition: all 0.4s ease;
+}
+
+.btn:hover:not([disabled]) {
+  background-color: #b326a5;
+}
+
+.btn:disabled {
+  cursor: no-drop;
+}
+
+#next-btn {
+  /* display: none; */
+  display: block;
+  padding: 10px 16px;
+  background-color: #ff8c00;
+  color: white;
+  border: 0;
+  border-radius: 4px;
+  margin: 10px;
+  margin: auto;
+}
+
+.correct {
+  background: #62ff68;
+}
+.incorrect {
+  background: #a92a2a;
+}
