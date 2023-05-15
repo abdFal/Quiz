@@ -9,6 +9,9 @@ body {
   -ms-user-select: none;
   user-select: none;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 .card {
   background-color: #ffffff;
   border-radius: 10px;
@@ -68,7 +71,8 @@ button {
   flex-direction: row-reverse;
 }
 
-#next-btn {
+#next-btn,
+#try-btn {
   display: block;
   padding: 10px 36px;
   background-color: #ff8c00;

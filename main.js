@@ -176,9 +176,11 @@ const questionElement = document.getElementById("question");
 const answerButton = document.getElementById("answer-button");
 const nextButton = document.getElementById("next-btn");
 const surrendButton = document.getElementById("surrender-btn");
+const tryBtn = document.getElementById("try-btn");
 const result = document.getElementById("result");
 const title = document.getElementById("quiz-title");
 title.innerHTML = "ANL Quiz | Answer Honestly Or Your'e Dumb";
+tryBtn.style.display = "none";
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -257,17 +259,20 @@ surrendButton.addEventListener("click", () => {
 function tryAgain() {
   questionElement.style.display = "block";
   surrendButton.style.display = "block";
+  tryBtn.style.display = "none";
+  result.style.display = "none";
   startQuiz();
 }
 
 function surrender() {
   resetState();
-  questionElement.innerHTML = "Your'e Coward! so bad";
-  result.innerHTML = "you have got" + score + ",and you give up";
-  nextButton.innerHTML = "Try Again";
+  questionElement.innerHTML = "Your'e Coward so bad";
+  result.style.display = "block";
+  result.innerHTML = "you have got " + score + " and you give up";
+  tryBtn.innerHTML = "Try Again";
   surrendButton.style.display = "none";
-  nextButton.style.display = "block";
-  nextButton.addEventListener("click", () => {
+  tryBtn.style.display = "block";
+  tryBtn.addEventListener("click", () => {
     tryAgain();
   });
 }
