@@ -63,16 +63,19 @@ button {
   cursor: no-drop;
 }
 
+.buttons-ass {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 #next-btn {
-  /* display: none; */
   display: block;
-  padding: 10px 16px;
+  padding: 10px 36px;
   background-color: #ff8c00;
   color: white;
   border: 0;
   border-radius: 4px;
   margin: 10px;
-  margin: auto;
 }
 
 .correct {
@@ -80,4 +83,14 @@ button {
 }
 .incorrect {
   background: #a92a2a;
+}
+
+#surrender-btn {
+  display: block;
+  padding: 10px 19px;
+  background-color: #ff0000;
+  color: white;
+  border: 0;
+  border-radius: 4px;
+  margin: 10px;
 }

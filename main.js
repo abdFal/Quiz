@@ -175,6 +175,7 @@ const questions = [
 const questionElement = document.getElementById("question");
 const answerButton = document.getElementById("answer-button");
 const nextButton = document.getElementById("next-btn");
+const surrendButton = document.getElementById("surrender-btn");
 const result = document.getElementById("result");
 const title = document.getElementById("quiz-title");
 title.innerHTML = "ANL Quiz | Answer Honestly Or Your'e Dumb";
@@ -248,6 +249,26 @@ function handleNextBtn() {
   } else {
     showScore();
   }
+}
+surrendButton.addEventListener("click", () => {
+  surrender();
+});
+
+function tryAgain() {
+  questionElement.style.display = "block";
+  surrendButton.style.display = "block";
+  startQuiz();
+}
+
+function surrender() {
+  resetState();
+  questionElement.innerHTML = "Your'e Coward! Dont Surrender Again ya";
+  nextButton.innerHTML = "Try Again";
+  surrendButton.style.display = "none";
+  nextButton.style.display = "block";
+  nextButton.addEventListener("click", () => {
+    tryAgain();
+  });
 }
 
 nextButton.addEventListener("click", () => {
