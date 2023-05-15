@@ -262,7 +262,8 @@ function tryAgain() {
 
 function surrender() {
   resetState();
-  questionElement.innerHTML = "Your'e Coward! Dont Surrender Again ya";
+  questionElement.innerHTML = "Your'e Coward! so bad";
+  result.innerHTML = "you have got" + score + ",and you give up";
   nextButton.innerHTML = "Try Again";
   surrendButton.style.display = "none";
   nextButton.style.display = "block";
@@ -281,5 +282,5 @@ nextButton.addEventListener("click", () => {
 
 startQuiz();
 
-// ignore this, nothing
+// ignore this, nothing you can use for the endpoint of your own localhost url
 history.replaceState(null, null, "http://127.0.0.1:9001/ANLQuiz");

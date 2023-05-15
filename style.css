@@ -9,6 +9,9 @@ body {
   -ms-user-select: none;
   user-select: none;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 .card {
   background-color: #ffffff;
   border-radius: 10px;
