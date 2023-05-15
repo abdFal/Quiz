@@ -71,7 +71,8 @@ button {
   flex-direction: row-reverse;
 }
 
-#next-btn {
+#next-btn,
+#try-btn {
   display: block;
   padding: 10px 36px;
   background-color: #ff8c00;
