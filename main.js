@@ -201,6 +201,7 @@ let score = 0;
 function startQuiz() {
   currentQuestionIndex = 0;
   score = 0;
+  iqButton.style.display = "none";
   nextButton.innerHTML = "Next";
   showQuestion();
 }
