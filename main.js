@@ -170,6 +170,15 @@ const questions = [
       { text: "P = W/t", correct: false },
     ],
   },
+  {
+    question: "Dasha Taran has an epithet, what's that?",
+    answers: [
+      { text: "Gift From God", correct: true },
+      { text: "Taranka", correct: false },
+      { text: "Angel of the world", correct: false },
+      { text: "Fallin Angel", correct: false },
+    ],
+  },
 ];
 
 const questionElement = document.getElementById("question");
@@ -179,8 +188,12 @@ const surrendButton = document.getElementById("surrender-btn");
 const tryBtn = document.getElementById("try-btn");
 const result = document.getElementById("result");
 const title = document.getElementById("quiz-title");
+const iq = document.getElementById("iq");
+
 title.innerHTML = "ANL Quiz | Answer Honestly Or Your'e Dumb";
+
 tryBtn.style.display = "none";
+iq.style.display = "none";
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -242,6 +255,7 @@ function showScore() {
   nextButton.innerHTML = "Play Again";
   nextButton.style.display = "block";
   questionElement.style.display = "none";
+  iqButton.style.display = "block";
 }
 
 function handleNextBtn() {
@@ -270,6 +284,8 @@ function surrender() {
   result.style.display = "block";
   result.innerHTML = "you have got " + score + " and you give up";
   tryBtn.innerHTML = "Try Again";
+  iq.style.display = "none";
+  iqButton.style.display = "block";
   surrendButton.style.display = "none";
   tryBtn.style.display = "block";
   tryBtn.addEventListener("click", () => {
@@ -285,6 +301,18 @@ nextButton.addEventListener("click", () => {
   }
 });
 
+const iqButton = document.getElementById("show-btn");
+iqButton.style.display = "none";
+
+function showIQ() {
+  iq.innerHTML = "Your IQ is " + (score * 100) / questions.length;
+  iq.style.display = "block";
+  surrendButton.style.display = "none";
+}
+
+iqButton.addEventListener("click", () => {
+  showIQ();
+});
 startQuiz();
 
 // ignore this, nothing you can use for the endpoint of your own localhost url
