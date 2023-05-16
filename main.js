@@ -319,3 +319,11 @@ startQuiz();
 
 // ignore this, nothing you can use for the endpoint of your own localhost url
 history.replaceState(null, null, "http://127.0.0.1:9001/ANLQuiz");
+
+let docTitle = document.title;
+window.addEventListener("blur", () => {
+  document.title = "Come here please :( ";
+});
+window.addEventListener("focus", () => {
+  document.title = docTitle;
+});
